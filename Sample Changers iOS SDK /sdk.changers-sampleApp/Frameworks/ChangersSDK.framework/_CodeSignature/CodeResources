@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		MSgj7IGDmHFwYc8uSI7ooJf9oM8=
-		</data>
 		<key>Headers/ChangersSDK-Swift.h</key>
 		<data>
 		QBZHeIpUYcN/VXXiGEyaCJ9bzlw=
@@ -19,10 +15,6 @@
 		<key>Info.plist</key>
 		<data>
 		iCxN9h6e8rrovAKFTO9lDbA7hN0=
-		</data>
-		<key>Modules/.DS_Store</key>
-		<data>
-		wMwFU6m5ahhTbGQeMur/ulKmmcQ=
 		</data>
 		<key>Modules/ChangersSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
@@ -38,7 +30,7 @@
 		</data>
 		<key>Modules/ChangersSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		x26bXdha9JF6OA7lPiWeFKLTlvw=
+		Fqw45NIbnFG+ISrKZrVUY+4zOi8=
 		</data>
 		<key>Modules/ChangersSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -46,7 +38,7 @@
 		</data>
 		<key>Modules/ChangersSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		x26bXdha9JF6OA7lPiWeFKLTlvw=
+		Fqw45NIbnFG+ISrKZrVUY+4zOi8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			08SJfxqj2PK3yN+HVgI+NdwJ312QiYIghJnABlZ6f6I=
+			4Gqcy+eiC2z2/XZbiggGBPP383ugiA95SZj6d8BZM2c=
 			</data>
 		</dict>
 		<key>Modules/ChangersSDK.swiftmodule/arm64.swiftdoc</key>
@@ -108,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			08SJfxqj2PK3yN+HVgI+NdwJ312QiYIghJnABlZ6f6I=
+			4Gqcy+eiC2z2/XZbiggGBPP383ugiA95SZj6d8BZM2c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

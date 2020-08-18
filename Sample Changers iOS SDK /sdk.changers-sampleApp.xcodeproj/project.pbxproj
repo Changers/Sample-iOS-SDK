@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62675EF29D86821CF267D66C /* Pods_sdk_changers_sampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17ADFA8AC8862C37AFAABD2 /* Pods_sdk_changers_sampleApp.framework */; };
+		E40C7A4F24EBB9460053735C /* ChangersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E40C7A4E24EBB9460053735C /* ChangersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E428342924E51A650057E44D /* ChangersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428342824E51A650057E44D /* ChangersHelper.swift */; };
 		E47821B624755F20007B528C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47821B524755F20007B528C /* AppDelegate.swift */; };
 		E47821BA24755F20007B528C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47821B924755F20007B528C /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E40C7A4F24EBB9460053735C /* ChangersSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +46,7 @@
 		159A896EEE397D4209792BF4 /* Pods-sdk.changers-sampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk.changers-sampleApp.release.xcconfig"; path = "Target Support Files/Pods-sdk.changers-sampleApp/Pods-sdk.changers-sampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		20740C5304DE6DD45F11C257 /* Pods-sdk.changers-sampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk.changers-sampleApp.debug.xcconfig"; path = "Target Support Files/Pods-sdk.changers-sampleApp/Pods-sdk.changers-sampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A17ADFA8AC8862C37AFAABD2 /* Pods_sdk_changers_sampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdk_changers_sampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E40C7A4E24EBB9460053735C /* ChangersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChangersSDK.framework; sourceTree = "<group>"; };
 		E428342824E51A650057E44D /* ChangersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangersHelper.swift; sourceTree = "<group>"; };
 		E47821B224755F20007B528C /* SDK Changers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDK Changers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47821B524755F20007B528C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		E47821D4247562BE007B528C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E40C7A4E24EBB9460053735C /* ChangersSDK.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
