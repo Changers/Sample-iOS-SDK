@@ -10,16 +10,24 @@ import Foundation
 import ChangersSDK
 
 extension ChangersEnv {
-    
-    var clientSecret: String {
+     
+    var clientSecret: String { // client secret provided by Changers
         switch self {
         case .development:
-            return "xVpnijCWWX7mPaL0CLEy6GIBN207cGMA9DPKKMnn"
+            return "dev_client_secret" 
         case .production:
-            return "not_yet_available"
+            return "prod_client_secret"
         case .stage:
-            return "HPMXkWyeMLIDpLzmYPM1dGz0B60wJoyajwrk3zHB"
+            return "stage_client_secret"
         }
+    }
+    
+    var clientId: Int {
+        return 2 // client id provided by Changers
+    }
+    
+    var clientName: String {
+        return "client_name" // client named provided by Changers
     }
 }
 
@@ -27,9 +35,9 @@ struct ChangersHelper {
     
     static var config: ChangersConfig {
         let env = ChangersEnv.stage
-        return ChangersConfig(clientId: 2,
+        return ChangersConfig(clientId: env.clientId,
                               clientSecret: env.clientSecret,
-                              clientName: "darmstadt",
+                              clientName: env.clientName,
                               environment: env
         )
     }
