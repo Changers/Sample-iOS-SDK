@@ -11,10 +11,10 @@ import ChangersSDK
 
 extension ChangersEnv {
      
-    var clientSecret: String { // client secret provided by Changers
+    var clientSecret: String { // client secret provided by Changers, they are different between each env
         switch self {
         case .development:
-            return "dev_client_secret" 
+            return "dev_client_secret"
         case .production:
             return "prod_client_secret"
         case .stage:
@@ -22,12 +22,19 @@ extension ChangersEnv {
         }
     }
     
-    var clientId: Int {
-        return 2 // client id provided by Changers
+    var clientId: Int { // client id provided by Changers, they are different between each env
+        switch self {
+        case .development:
+            return 2
+        case .production:
+            return 2
+        case .stage:
+            return 2
+        }
     }
     
     var clientName: String {
-        return "client_name" // client named provided by Changers
+        return "client_name" // client named provided by Changers, they are different between each env
     }
 }
 
