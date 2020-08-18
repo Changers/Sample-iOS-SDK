@@ -18,11 +18,14 @@ Both authorizations are requested by the Changers SDK when needed.
 To function properly the SDK requires the **'Always'** location permission. 
 
 
-## 1. Dependencies
+## 1. Installation
 
 ```
   pod 'MotionTagSDK', git: "https://gitlab.com/motiontag-dist/tracker-library-ios.git"
 ```
+
+Manually drag and drop `ChangersSDK` to `Build Phases` >`Embed Frameworks` in your project
+
   
 ## 2. Interface 
 
