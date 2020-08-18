@@ -21,7 +21,7 @@ To function properly the SDK requires the **'Always'** location permission.
 ## 1. Installation
 
 ```
-  Manually drag and drop `ChangersSDK` to `Build Phases` >`Embed Frameworks` in your project
+  Manually drag and drop `ChangersSDK.framework` from [here!](https://github.com/Changers/Sample-iOS-SDK/tree/master/ChangersSDK.framework) to `Build Phases` >`Embed Frameworks` in your project
 ```
 
 ```
@@ -117,5 +117,5 @@ enum ChangersSDKError: Error {
 
 ## 6. Example
 
-Checkout the "Sample Changers iOS SDK" folder  https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20  for an example application.
+Checkout the "Sample Changers iOS SDK" folder [here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20)  for an example application.
 
