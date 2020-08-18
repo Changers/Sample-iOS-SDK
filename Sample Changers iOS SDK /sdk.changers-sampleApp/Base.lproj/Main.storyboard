@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sdk_changers_sampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-wP-kaX" customClass="LoadingButton" customModule="sdk_changers_sampleApp" customModuleProvider="target">
+                                <rect key="frame" x="173.5" y="433" width="67" height="30"/>
+                                <state key="normal" title="open web"/>
+                                <connections>
+                                    <action selector="openWebAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="LgS-zz-zTM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si0-3y-DKh" customClass="LoadingButton" customModule="sdk_changers_sampleApp" customModuleProvider="target">
+                                <rect key="frame" x="357" y="64" width="37" height="30"/>
+                                <state key="normal" title="UUID"/>
+                                <connections>
+                                    <action selector="copiedAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="apM-0M-u7b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SLq-wP-kaX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E9A-iF-Tzq"/>
+                            <constraint firstItem="SLq-wP-kaX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SgQ-ew-36O"/>
+                            <constraint firstItem="Si0-3y-DKh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jPt-Sd-sCG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Si0-3y-DKh" secondAttribute="trailing" constant="20" id="mdS-RW-v51"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="copyUUIDButton" destination="Si0-3y-DKh" id="y9I-yb-gWe"/>
+                        <outlet property="openWeb" destination="SLq-wP-kaX" id="UXt-3E-BFP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
