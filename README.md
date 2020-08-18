@@ -111,5 +111,5 @@ enum ChangersSDKError: Error {
 
 ## 6. Example
 
-Checkout the "Example" folder   for an example application.
+Checkout the "Sample Changers iOS SDK" folder  https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20  for an example application.
 
