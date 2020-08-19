@@ -10,7 +10,6 @@ import Foundation
 import ChangersSDK
 
 extension ChangersEnv {
-     
     var clientSecret: String { // client secret provided by Changers, they are different between each env
         switch self {
         case .development:
