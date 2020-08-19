@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     @IBAction func openWebAction() {
         if Changers.isReady {
-            Changers.loadWebApp(on: self)
+            Changers.loadWebApp(on: self, debug: true)
         } else {
             appDelegate.changers.setup()
         }
