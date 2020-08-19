@@ -49,7 +49,7 @@ public protocol ChangersDelegate: class {
 
 
 ```
-static func loadWebApp(on viewController: UIViewController, completion: (() -> Void)? = nil)
+static func loadWebApp(on viewController: UIViewController, debug: Bool = false, completion: (() -> Void)? = nil)
 static var isReady: Bool { get }
 
 ```
