@@ -191,7 +191,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import MotionTagSDK;
 @import ObjectiveC;
 @import UIKit;
-@import WebKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -225,8 +224,6 @@ SWIFT_CLASS("_TtC11ChangersSDK8Changers")
 @interface Changers : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 
