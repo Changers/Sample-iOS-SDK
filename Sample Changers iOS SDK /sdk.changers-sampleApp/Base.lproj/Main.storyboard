@@ -1,52 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rwq-Gg-hIu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="TnS-gv-rFP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sdk_changers_sampleApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="Rwq-Gg-hIu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d0v-tp-yfN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Kq-j7-Nb9" kind="relationship" relationship="rootViewController" id="aVz-AW-zpL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbV-pW-7jb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1107" y="146"/>
+        </scene>
+        <!--Sample iOS App-->
+        <scene sceneID="bOj-wa-g9v">
+            <objects>
+                <viewController id="1Kq-j7-Nb9" customClass="ViewController" customModule="SDK_Changers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SDb-QA-9zG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-wP-kaX" customClass="LoadingButton" customModule="sdk_changers_sampleApp" customModuleProvider="target">
-                                <rect key="frame" x="173.5" y="433" width="67" height="30"/>
-                                <state key="normal" title="open web"/>
-                                <connections>
-                                    <action selector="openWebAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="LgS-zz-zTM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si0-3y-DKh" customClass="LoadingButton" customModule="sdk_changers_sampleApp" customModuleProvider="target">
-                                <rect key="frame" x="357" y="64" width="37" height="30"/>
-                                <state key="normal" title="UUID"/>
-                                <connections>
-                                    <action selector="copiedAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="apM-0M-u7b"/>
-                                </connections>
-                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4z-UN-0cF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SLq-wP-kaX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E9A-iF-Tzq"/>
-                            <constraint firstItem="SLq-wP-kaX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SgQ-ew-36O"/>
-                            <constraint firstItem="Si0-3y-DKh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jPt-Sd-sCG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Si0-3y-DKh" secondAttribute="trailing" constant="20" id="mdS-RW-v51"/>
+                            <constraint firstAttribute="bottom" secondItem="A4z-UN-0cF" secondAttribute="bottom" id="9wI-3U-a4y"/>
+                            <constraint firstItem="A4z-UN-0cF" firstAttribute="top" secondItem="SDb-QA-9zG" secondAttribute="topMargin" id="PCc-L8-yub"/>
+                            <constraint firstItem="A4z-UN-0cF" firstAttribute="leading" secondItem="SDb-QA-9zG" secondAttribute="leading" id="WVb-uU-J4M"/>
+                            <constraint firstAttribute="trailing" secondItem="A4z-UN-0cF" secondAttribute="trailing" id="t5S-n3-jeR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Sample iOS App" id="sTd-N5-CdA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="j5B-AA-ZuS">
+                            <connections>
+                                <action selector="copiedAction" destination="1Kq-j7-Nb9" id="qIo-r6-SDG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" springLoaded="YES" id="3wj-4v-Qf5" customClass="LoadingButton" customModule="SDK_Changers" customModuleProvider="target"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="copyUUIDButton" destination="Si0-3y-DKh" id="y9I-yb-gWe"/>
-                        <outlet property="openWeb" destination="SLq-wP-kaX" id="UXt-3E-BFP"/>
+                        <outlet property="openWeb" destination="3wj-4v-Qf5" id="wxK-CW-t9k"/>
+                        <outlet property="webView" destination="A4z-UN-0cF" id="pcZ-IY-joy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwT-ch-bbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="244.92753623188409" y="381.69642857142856"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,7 @@
 
 import UIKit
 import ChangersSDK
+import WebKit
 
 protocol SDKWrapperDelegate {
     func updateUI()
@@ -17,16 +18,15 @@ protocol SDKWrapperDelegate {
 class ViewController: UIViewController {
     
     @IBOutlet weak var openWeb: LoadingButton!
-    @IBOutlet weak var copyUUIDButton: LoadingButton!
+    @IBOutlet weak var webView: WKWebView!
+    
     private weak var appDelegate: AppDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        copyUUIDButton.showLoading()
-        copyUUIDButton.isEnabled = true
+        openWeb.loadingButtonDelegate = self
         openWeb.showLoading()
-        openWeb.isEnabled = false
-        
+        webView.load(URLRequest(url: URL(string: "https://changers.com")!))
         if let del = UIApplication.shared.delegate as? AppDelegate {
             self.appDelegate = del
             appDelegate.sdkDelegate = self
@@ -36,18 +36,10 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func openWebAction() {
-        if Changers.isReady {
-            Changers.loadWebApp(on: self, debug: true)
-        } else {
-            appDelegate.changers.setup()
-        }
-    }
-    
     @IBAction func copiedAction() {
         if let changersUUID = ChangersHelper.changersUUID {
-            UIPasteboard.general.setValue("changers user id: \(changersUUID) \n\n automatic tracking id: \(appDelegate.changers.motionTagUUID ?? "null") \n\n user token: \(appDelegate.changers.userToken ?? "null")"  , forPasteboardType: "public.utf8-plain-text")
-            let alert = UIAlertController(title: "[Changers SDK]", message: "User credentials copied to clipboard ✅", preferredStyle: .alert)
+            UIPasteboard.general.setValue("environement : \(ChangersHelper.changersEnv) \n\n changers user id: \(changersUUID) \n\n automatic tracking id: \(appDelegate.changers.motionTagUUID ?? "null") \n\n user token: \(appDelegate.changers.userToken ?? "null")"  , forPasteboardType: "public.utf8-plain-text")
+            let alert = UIAlertController(title: "[Changers SDK \(Changers.versionBuildSDK) - \(ChangersHelper.changersEnv))]", message: "User credentials copied to clipboard ✅", preferredStyle: .alert)
             let continueAction = UIAlertAction(title: "Ok", style: .default)
             alert.addAction(continueAction)
             self.present(alert, animated: true)
@@ -64,12 +56,18 @@ extension ViewController: SDKWrapperDelegate {
     
     func updateUI() {
         openWeb.hideLoading()
-        copyUUIDButton.hideLoading()
-        if let changersUUID = ChangersHelper.changersUUID {
-            copyUUIDButton.setTitle(changersUUID, for: .normal)
-        } else {
-            copyUUIDButton.setTitle("n/a", for: .normal)
-        }
     }
     
+}
+
+extension ViewController: LoadingButtonDelegate {
+    
+    func openWebApp() {
+        if Changers.isReady {
+            Changers.loadWebApp(on: self, debug: true)
+        } else {
+            openWeb.showLoading()
+            appDelegate.changers.setup()
+        }
+    }
 }

@@ -15,7 +15,7 @@ extension ChangersEnv {
         case .development:
             return "CLIENT_SECRET_DEV"
         case .production:
-            return "CLIENT_SECRET_PROD"
+            return "w14mkOzaFvFKnWGc0vQmCyC6QJSXoeGV7bAPlDKD"
         case .stage:
             return "CLIENT_SECRET_STAGE"
         }
@@ -33,18 +33,20 @@ extension ChangersEnv {
     }
     
     var clientName: String {
-        return "CLIENT_NAME" // client named provided by Changers, they are different between each env
+        return "darmstadt" // client named provided by Changers, they are different between each env
     }
 }
 
+
 struct ChangersHelper {
     
+    static let changersEnv: ChangersEnv = ChangersEnv.production
+
     static var config: ChangersConfig {
-        let env = ChangersEnv.stage
-        return ChangersConfig(clientId: env.clientId,
-                              clientSecret: env.clientSecret,
-                              clientName: env.clientName,
-                              environment: env
+        return ChangersConfig(clientId: changersEnv.clientId,
+                              clientSecret: changersEnv.clientSecret,
+                              clientName: changersEnv.clientName,
+                              environment: changersEnv
         )
     }
 

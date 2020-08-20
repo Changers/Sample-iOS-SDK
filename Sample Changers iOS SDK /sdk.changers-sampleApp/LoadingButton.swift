@@ -9,47 +9,38 @@
 import Foundation
 import UIKit
 
-class LoadingButton: UIButton {
+protocol LoadingButtonDelegate: class {
+    func openWebApp()
+}
+class LoadingButton: UIBarButtonItem {
+    
+    lazy var activityIndicator = UIActivityIndicatorView()
 
-    struct ButtonState {
-        var state: UIControl.State
-        var title: String?
-        var image: UIImage?
-    }
-
-    private (set) var buttonStates: [ButtonState] = []
-    private lazy var activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.color = self.titleColor(for: .normal)
-        self.addSubview(activityIndicator)
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        let xCenterConstraint = NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: activityIndicator, attribute: .centerX, multiplier: 1, constant: 0)
-        let yCenterConstraint = NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: activityIndicator, attribute: .centerY, multiplier: 1, constant: 0)
-        self.addConstraints([xCenterConstraint, yCenterConstraint])
-        return activityIndicator
+    weak var loadingButtonDelegate: LoadingButtonDelegate?
+    
+    private lazy var button: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 27, height: 25))
+        button.setImage(UIImage(named: "logo"), for: .normal)
+        button.setImage(UIImage(named: "logo"), for: .highlighted)
+        button.addTarget(self, action: #selector(LoadingButton.openWebApp), for: .touchUpInside)
+        return button
     }()
-
+    
     func showLoading() {
+        customView = activityIndicator
+        activityIndicator.sizeToFit()
         activityIndicator.startAnimating()
-        var buttonStates: [ButtonState] = []
-        for state in [UIControl.State.disabled] {
-            let buttonState = ButtonState(state: state, title: title(for: state), image: image(for: state))
-            buttonStates.append(buttonState)
-            setTitle("", for: state)
-            setImage(UIImage(), for: state)
-        }
-        self.buttonStates = buttonStates
+        activityIndicator.color = UIColor.systemGray
         isEnabled = false
     }
 
     func hideLoading() {
-        activityIndicator.stopAnimating()
-        for buttonState in buttonStates {
-            setTitle(buttonState.title, for: buttonState.state)
-            setImage(buttonState.image, for: buttonState.state)
-        }
+        customView = button
         isEnabled = true
+    }
+    
+    @objc private func openWebApp() {
+        loadingButtonDelegate?.openWebApp()
     }
 
 }
