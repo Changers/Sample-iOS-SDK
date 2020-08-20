@@ -116,7 +116,44 @@ enum ChangersSDKError: Error {
 ```
 
 
-## 6. Example
+## 6. Distribute your app to the AppStore
+
+The framework is built to run on both Simulator and Physical device. While you sending your application to the App Store you will face "Operation Error: Unsupported architectures" error. You have to remove the unused architectures from the Changers framework before sending to the App Store. For this select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase.
+
+```
+#!/bin/sh
+
+echo "\n ⏱ Removing Unused Architectures \n\n\n"
+
+exec > /tmp/${PROJECT_NAME}_archive.log 2>&1
+
+FRAMEWORK="ChangersSDK"
+
+FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK"
+
+EXTRACTED_ARCHS=()
+
+for ARCH in $ARCHS
+
+do
+
+lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+
+EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+
+done
+
+lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+
+rm "${EXTRACTED_ARCHS[@]}"
+rm "$FRAMEWORK_EXECUTABLE_PATH"
+mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+
+echo "\n ⏱ Removing Unused Architectures \n\n\n"
+echo "\n\n\n 🏁 Completed removing unused architectures from your fat framework."
+echo "\n\n\n 🔍 For more details please check the /tmp/${PROJECT_NAME}_archive.log file. \n\n\n"
+```
+
+## 7. Example
 
 Checkout the "Sample Changers iOS SDK" folder [here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20)  for an example application.
-
