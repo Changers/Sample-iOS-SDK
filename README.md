@@ -112,6 +112,7 @@ enum ChangersSDKError: Error {
     case unknownError
     case connectionError
     case credentialsError
+    case configError
 }
 ```
 
