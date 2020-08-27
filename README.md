@@ -21,13 +21,12 @@ To function properly the SDK requires the **'Always'** location permission.
 ## 1. Installation
 
 ```
-  Manually drag and drop `ChangersSDK.framework` to `Build Phases` >`Embed Frameworks` in your project
-```
-SDK available [here](https://github.com/Changers/Sample-iOS-SDK/tree/master/ChangersSDK.framework)
+  Manually drag and drop `ChangersSDK.framework` to Your project
+  Manually drag and drop `MotionTagSDK.framework` to Your project
 
 ```
-  pod 'MotionTagSDK', git: "https://gitlab.com/motiontag-dist/tracker-library-ios.git"
-```
+ChangersSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20/ChangersSDK.framework)
+MotionTagSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20/MotionTagSDK.framework)
 
 
   
