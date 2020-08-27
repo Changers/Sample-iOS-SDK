@@ -125,37 +125,45 @@ enum ChangersSDKError: Error {
 The framework is built to run on both Simulator and Physical device. While you sending your application to the App Store you will face "Operation Error: Unsupported architectures" error. You have to remove the unused architectures from the Changers framework before sending to the App Store. For this select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase.
 
 ```
-#!/bin/sh
+echo "Target architectures: $ARCHS"
 
-echo "\n ⏱ Removing Unused Architectures \n\n\n"
+APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
 
-exec > /tmp/${PROJECT_NAME}_archive.log 2>&1
-
-FRAMEWORK="ChangersSDK"
-
-FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK"
-
-EXTRACTED_ARCHS=()
-
-for ARCH in $ARCHS
-
+find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
 do
+FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
+FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
+echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
+echo $(lipo -info "$FRAMEWORK_EXECUTABLE_PATH")
 
-lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+FRAMEWORK_TMP_PATH="$FRAMEWORK_EXECUTABLE_PATH-tmp"
 
-EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+# remove simulator's archs if location is not simulator's directory
+case "${TARGET_BUILD_DIR}" in
+*"iphonesimulator")
+    echo "No need to remove archs"
+    ;;
+*)
+    if $(lipo "$FRAMEWORK_EXECUTABLE_PATH" -verify_arch "i386") ; then
+    lipo -output "$FRAMEWORK_TMP_PATH" -remove "i386" "$FRAMEWORK_EXECUTABLE_PATH"
+    echo "i386 architecture removed"
+    rm "$FRAMEWORK_EXECUTABLE_PATH"
+    mv "$FRAMEWORK_TMP_PATH" "$FRAMEWORK_EXECUTABLE_PATH"
+    fi
+    if $(lipo "$FRAMEWORK_EXECUTABLE_PATH" -verify_arch "x86_64") ; then
+    lipo -output "$FRAMEWORK_TMP_PATH" -remove "x86_64" "$FRAMEWORK_EXECUTABLE_PATH"
+    echo "x86_64 architecture removed"
+    rm "$FRAMEWORK_EXECUTABLE_PATH"
+    mv "$FRAMEWORK_TMP_PATH" "$FRAMEWORK_EXECUTABLE_PATH"
+    fi
+    ;;
+esac
+
+echo "Completed for executable $FRAMEWORK_EXECUTABLE_PATH"
+echo $(lipo -info "$FRAMEWORK_EXECUTABLE_PATH")
 
 done
 
-lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
-
-rm "${EXTRACTED_ARCHS[@]}"
-rm "$FRAMEWORK_EXECUTABLE_PATH"
-mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
-
-echo "\n ⏱ Removing Unused Architectures \n\n\n"
-echo "\n\n\n 🏁 Completed removing unused architectures from your fat framework."
-echo "\n\n\n 🔍 For more details please check the /tmp/${PROJECT_NAME}_archive.log file. \n\n\n"
 ```
 
 ## 7. Example
