@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62675EF29D86821CF267D66C /* Pods_sdk_changers_sampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17ADFA8AC8862C37AFAABD2 /* Pods_sdk_changers_sampleApp.framework */; };
-		E40C7A4F24EBB9460053735C /* ChangersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E40C7A4E24EBB9460053735C /* ChangersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E40FD13C24F7FD9200506D23 /* ChangersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40FD13624F7FD7D00506D23 /* ChangersSDK.framework */; };
+		E40FD13D24F7FD9200506D23 /* ChangersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E40FD13624F7FD7D00506D23 /* ChangersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E40FD14024F7FF1E00506D23 /* MotionTagSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40FD13E24F7FF1800506D23 /* MotionTagSDK.framework */; };
+		E40FD14124F7FF1E00506D23 /* MotionTagSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E40FD13E24F7FF1800506D23 /* MotionTagSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E428342924E51A650057E44D /* ChangersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428342824E51A650057E44D /* ChangersHelper.swift */; };
 		E47821B624755F20007B528C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47821B524755F20007B528C /* AppDelegate.swift */; };
 		E47821BA24755F20007B528C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47821B924755F20007B528C /* ViewController.swift */; };
@@ -16,37 +18,26 @@
 		E47821BF24755F25007B528C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47821BE24755F25007B528C /* Assets.xcassets */; };
 		E47821C224755F25007B528C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47821C024755F25007B528C /* LaunchScreen.storyboard */; };
 		E4C8B25624EBA3E300019E0A /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8B25524EBA3E300019E0A /* LoadingButton.swift */; };
-		E4CD766924D0643B0089F48E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CD766824D0643B0089F48E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E4E12A7F2477FBA200C25A4F /* Embed Frameworks */ = {
+		E458417924F6ED0000036A31 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E40C7A4F24EBB9460053735C /* ChangersSDK.framework in Embed Frameworks */,
+				E40FD14124F7FF1E00506D23 /* MotionTagSDK.framework in Embed Frameworks */,
+				E40FD13D24F7FD9200506D23 /* ChangersSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4E12A802477FC2200C25A4F /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		159A896EEE397D4209792BF4 /* Pods-sdk.changers-sampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk.changers-sampleApp.release.xcconfig"; path = "Target Support Files/Pods-sdk.changers-sampleApp/Pods-sdk.changers-sampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		20740C5304DE6DD45F11C257 /* Pods-sdk.changers-sampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdk.changers-sampleApp.debug.xcconfig"; path = "Target Support Files/Pods-sdk.changers-sampleApp/Pods-sdk.changers-sampleApp.debug.xcconfig"; sourceTree = "<group>"; };
-		A17ADFA8AC8862C37AFAABD2 /* Pods_sdk_changers_sampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdk_changers_sampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E40C7A4E24EBB9460053735C /* ChangersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChangersSDK.framework; sourceTree = "<group>"; };
+		E40FD13624F7FD7D00506D23 /* ChangersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChangersSDK.framework; sourceTree = "<group>"; };
+		E40FD13E24F7FF1800506D23 /* MotionTagSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MotionTagSDK.framework; sourceTree = "<group>"; };
 		E428342824E51A650057E44D /* ChangersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangersHelper.swift; sourceTree = "<group>"; };
 		E47821B224755F20007B528C /* SDK Changers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDK Changers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47821B524755F20007B528C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +47,6 @@
 		E47821C124755F25007B528C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E47821C324755F25007B528C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C8B25524EBA3E300019E0A /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
-		E4CD766824D0643B0089F48E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,28 +54,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62675EF29D86821CF267D66C /* Pods_sdk_changers_sampleApp.framework in Frameworks */,
+				E40FD14024F7FF1E00506D23 /* MotionTagSDK.framework in Frameworks */,
+				E40FD13C24F7FD9200506D23 /* ChangersSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		435ED33257C2B8A27AC27162 /* Frameworks */ = {
+		E458415124F6EB1000036A31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A17ADFA8AC8862C37AFAABD2 /* Pods_sdk_changers_sampleApp.framework */,
+				E40FD13E24F7FF1800506D23 /* MotionTagSDK.framework */,
+				E40FD13624F7FD7D00506D23 /* ChangersSDK.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A472B7F93A1F50A445B6E3EE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				20740C5304DE6DD45F11C257 /* Pods-sdk.changers-sampleApp.debug.xcconfig */,
-				159A896EEE397D4209792BF4 /* Pods-sdk.changers-sampleApp.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		E47821A924755F20007B528C = {
@@ -93,8 +76,7 @@
 			children = (
 				E47821B424755F20007B528C /* sdk.changers-sampleApp */,
 				E47821B324755F20007B528C /* Products */,
-				A472B7F93A1F50A445B6E3EE /* Pods */,
-				435ED33257C2B8A27AC27162 /* Frameworks */,
+				E458415124F6EB1000036A31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,18 +99,8 @@
 				E47821BE24755F25007B528C /* Assets.xcassets */,
 				E47821C024755F25007B528C /* LaunchScreen.storyboard */,
 				E47821C324755F25007B528C /* Info.plist */,
-				E4CD766824D0643B0089F48E /* GoogleService-Info.plist */,
-				E47821D4247562BE007B528C /* Frameworks */,
 			);
 			path = "sdk.changers-sampleApp";
-			sourceTree = "<group>";
-		};
-		E47821D4247562BE007B528C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E40C7A4E24EBB9460053735C /* ChangersSDK.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,14 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47821C624755F25007B528C /* Build configuration list for PBXNativeTarget "sdk.changers-sampleApp" */;
 			buildPhases = (
-				C675575DA5BD3E61B6B112D7 /* [CP] Check Pods Manifest.lock */,
 				E47821AE24755F20007B528C /* Sources */,
 				E47821AF24755F20007B528C /* Frameworks */,
 				E47821B024755F20007B528C /* Resources */,
-				E4E12A7F2477FBA200C25A4F /* Embed Frameworks */,
-				E4E12A802477FC2200C25A4F /* CopyFiles */,
-				41C7209DFB76F8B9E6211BA8 /* [CP] Embed Pods Frameworks */,
 				E4216DA524EE6D3C007DF0B5 /* ShellScript */,
+				E458417924F6ED0000036A31 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,7 +163,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CD766924D0643B0089F48E /* GoogleService-Info.plist in Resources */,
 				E47821C224755F25007B528C /* LaunchScreen.storyboard in Resources */,
 				E47821BF24755F25007B528C /* Assets.xcassets in Resources */,
 				E47821BD24755F20007B528C /* Main.storyboard in Resources */,
@@ -204,45 +172,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		41C7209DFB76F8B9E6211BA8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sdk.changers-sampleApp/Pods-sdk.changers-sampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sdk.changers-sampleApp/Pods-sdk.changers-sampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sdk.changers-sampleApp/Pods-sdk.changers-sampleApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C675575DA5BD3E61B6B112D7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-sdk.changers-sampleApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E4216DA524EE6D3C007DF0B5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,18 +343,19 @@
 		};
 		E47821C724755F25007B528C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20740C5304DE6DD45F11C257 /* Pods-sdk.changers-sampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0.30;
+				CURRENT_PROJECT_VERSION = 1.0.0.31;
 				DEVELOPMENT_TEAM = QYL8GFRZX7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/sdk.changers-sampleApp/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/sdk.changers-sampleApp",
-					"$(PROJECT_DIR)/sdk.changers-sampleApp/Frameworks",
 					"$(PROJECT_DIR)",
+					"$(BUILT_PRODUCTS_DIR)/ChangersSDK",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = "sdk.changers-sampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -443,18 +373,19 @@
 		};
 		E47821C824755F25007B528C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 159A896EEE397D4209792BF4 /* Pods-sdk.changers-sampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0.30;
+				CURRENT_PROJECT_VERSION = 1.0.0.31;
 				DEVELOPMENT_TEAM = QYL8GFRZX7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/sdk.changers-sampleApp/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/sdk.changers-sampleApp",
-					"$(PROJECT_DIR)/sdk.changers-sampleApp/Frameworks",
 					"$(PROJECT_DIR)",
+					"$(BUILT_PRODUCTS_DIR)/ChangersSDK",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = "sdk.changers-sampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

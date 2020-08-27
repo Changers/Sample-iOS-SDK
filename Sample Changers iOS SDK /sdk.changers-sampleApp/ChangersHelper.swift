@@ -13,27 +13,27 @@ extension ChangersEnv {
     var clientSecret: String { // client secret provided by Changers, they are different between each env
         switch self {
         case .development:
-            return "CLIENT_SECRET_DEV"
+            return "client_secret"
         case .production:
-            return "CLIENT_SECRET_PROD"
+            return "client_secret"
         case .stage:
-            return "CLIENT_SECRET_STAGE"
+            return "client_secret"
         }
     }
     
     var clientId: Int { // client id provided by Changers, they are different between each env
         switch self {
         case .development:
-            return 2
+            return 0
         case .production:
-            return 2
+            return 0
         case .stage:
-            return 2
+            return 0
         }
     }
     
     var clientName: String {
-        return "CLIENT_NAME" // client named provided by Changers, they are different between each env
+        return  "client_name"
     }
 }
 

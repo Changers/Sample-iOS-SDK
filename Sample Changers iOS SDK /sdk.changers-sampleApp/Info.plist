@@ -21,11 +21,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>For the automatic measurement of distances we need the option "Always Allow"</string>
+	<string>For the automatic measurement of distances we need the option &quot;Always Allow&quot;</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>For the automatic measurement of distances we need the option "Always Allow"</string>
+	<string>For the automatic measurement of distances we need the option &quot;Always Allow&quot;</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>For the automatic measurement of distances we need the option "Allow While Using App".</string>
+	<string>For the automatic measurement of distances we need the option &quot;Allow While Using App&quot;.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>For the automatic measurement of distances we need the access of the Motion Activity</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
