@@ -122,7 +122,7 @@ enum ChangersSDKError: Error {
 
 ## 6. Distribute your app to the AppStore
 
-The framework is built to run on both Simulator and Physical device. While you sending your application to the App Store you will face "Operation Error: Unsupported architectures" error. You have to remove the unused architectures from the Changers framework before sending to the App Store. For this select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase.
+The framework is built to run on both Simulator and Physical device. While you sending your application to the App Store you will face "Operation Error: Unsupported architectures" error. You have to remove the unused architectures from the Changers framework before sending to the App Store. For this select the Project, Choose Target → Project Name → Select Build Phases → Press “+” → New Run Script Phase. The script needs to be added *after* the embed framework.
 
 ```
 echo "Target architectures: $ARCHS"
