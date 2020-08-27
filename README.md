@@ -28,6 +28,8 @@ To function properly the SDK requires the **'Always'** location permission.
 
 ```
 ChangersSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20/ChangersSDK.framework)
+
+
 MotionTagSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20/MotionTagSDK.framework)
 
 
