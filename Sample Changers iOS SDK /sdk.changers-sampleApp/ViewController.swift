@@ -18,15 +18,13 @@ protocol SDKWrapperDelegate {
 class ViewController: UIViewController {
     
     @IBOutlet weak var openWeb: LoadingButton!
-    @IBOutlet weak var webView: WKWebView!
-    
+
     private weak var appDelegate: AppDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         openWeb.loadingButtonDelegate = self
-        openWeb.showLoading()
-        webView.load(URLRequest(url: URL(string: "https://changers.com")!))
+        self.updateUI()
         if let del = UIApplication.shared.delegate as? AppDelegate {
             self.appDelegate = del
             appDelegate.sdkDelegate = self
@@ -35,7 +33,7 @@ class ViewController: UIViewController {
             exit(0)
         }
     }
-    
+
     @IBAction func copiedAction() {
         if let changersUUID = ChangersHelper.changersUUID {
             UIPasteboard.general.setValue("environement : \(ChangersHelper.changersEnv) \n\n changers user id: \(changersUUID) \n\n automatic tracking id: \(appDelegate.changers.motionTagUUID ?? "null") \n\n user token: \(appDelegate.changers.userToken ?? "null")"  , forPasteboardType: "public.utf8-plain-text")
@@ -54,8 +52,12 @@ class ViewController: UIViewController {
 
 extension ViewController: SDKWrapperDelegate {
     
-    func updateUI() {
-        openWeb.hideLoading()
+      func updateUI() {
+        if !Changers.isReady {
+            openWeb.showLoading()
+        } else {
+            openWeb.hideLoading()
+        }
     }
     
 }

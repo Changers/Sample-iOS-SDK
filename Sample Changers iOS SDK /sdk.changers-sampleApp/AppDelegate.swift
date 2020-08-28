@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Firebase
 import ChangersSDK
 
 
@@ -20,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        FirebaseApp.configure()
         changers.delegate = self
         changers.initSDK(with: ChangersHelper.config, uuid: ChangersHelper.changersUUID)
         return true
