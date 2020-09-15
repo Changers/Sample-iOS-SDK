@@ -66,7 +66,7 @@ extension ViewController: LoadingButtonDelegate {
     
     func openWebApp() {
         if Changers.isReady {
-            Changers.loadWebApp(on: self, debug: true)
+            Changers.loadWebApp(on: self)
         } else {
             openWeb.showLoading()
             appDelegate.changers.setup()

@@ -186,9 +186,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import CoreLocation;
-@import Foundation;
-@import MotionTagSDK;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -207,17 +204,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="ChangersSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-@class CLLocationManager;
-
-SWIFT_CLASS("_TtC11ChangersSDK27AutomaticTrackingController")
-@interface AutomaticTrackingController : NSObject <MotionTagDelegate>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)locationManager:(CLLocationManager * _Nonnull)locationManager didChangeAuthorizationStatus:(CLAuthorizationStatus)didChange;
-- (void)didTransmitData:(NSDate * _Nonnull)transmissionTimestamp lastEventTimestamp:(NSDate * _Nonnull)lastEventTimestamp;
-@end
-
-
 
 
 SWIFT_CLASS("_TtC11ChangersSDK8Changers")
