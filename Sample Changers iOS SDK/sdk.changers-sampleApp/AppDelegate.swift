@@ -17,12 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var sdkDelegate:SDKWrapperDelegate? = nil
     lazy var changers = Changers()
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         changers.delegate = self
+        changers.debug = true
         changers.initSDK(with: ChangersHelper.config, uuid: ChangersHelper.changersUUID)
         return true
     }
+    
 }
 
 

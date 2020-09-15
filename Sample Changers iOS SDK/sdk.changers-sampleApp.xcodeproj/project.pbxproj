@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E428342924E51A650057E44D /* ChangersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428342824E51A650057E44D /* ChangersHelper.swift */; };
-		E470455F2510AF1100019C24 /* MotionTagSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E470455D2510AF1100019C24 /* MotionTagSDK.framework */; };
-		E47045602510AF1100019C24 /* MotionTagSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E470455D2510AF1100019C24 /* MotionTagSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E47045612510AF1100019C24 /* ChangersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E470455E2510AF1100019C24 /* ChangersSDK.framework */; };
-		E47045622510AF1100019C24 /* ChangersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E470455E2510AF1100019C24 /* ChangersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E47821B624755F20007B528C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47821B524755F20007B528C /* AppDelegate.swift */; };
 		E47821BA24755F20007B528C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47821B924755F20007B528C /* ViewController.swift */; };
 		E47821BD24755F20007B528C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47821BB24755F20007B528C /* Main.storyboard */; };
 		E47821BF24755F25007B528C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47821BE24755F25007B528C /* Assets.xcassets */; };
 		E47821C224755F25007B528C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47821C024755F25007B528C /* LaunchScreen.storyboard */; };
 		E4C8B25624EBA3E300019E0A /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8B25524EBA3E300019E0A /* LoadingButton.swift */; };
+		E4F675962510DE66001781D7 /* MotionTagSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F675942510DE66001781D7 /* MotionTagSDK.framework */; };
+		E4F675972510DE66001781D7 /* MotionTagSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F675942510DE66001781D7 /* MotionTagSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4F675982510DE66001781D7 /* ChangersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F675952510DE66001781D7 /* ChangersSDK.framework */; };
+		E4F675992510DE66001781D7 /* ChangersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4F675952510DE66001781D7 /* ChangersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E47045622510AF1100019C24 /* ChangersSDK.framework in Embed Frameworks */,
-				E47045602510AF1100019C24 /* MotionTagSDK.framework in Embed Frameworks */,
+				E4F675992510DE66001781D7 /* ChangersSDK.framework in Embed Frameworks */,
+				E4F675972510DE66001781D7 /* MotionTagSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,8 +37,6 @@
 
 /* Begin PBXFileReference section */
 		E428342824E51A650057E44D /* ChangersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangersHelper.swift; sourceTree = "<group>"; };
-		E470455D2510AF1100019C24 /* MotionTagSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MotionTagSDK.framework; path = Framework/MotionTagSDK.framework; sourceTree = "<group>"; };
-		E470455E2510AF1100019C24 /* ChangersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChangersSDK.framework; path = Framework/ChangersSDK.framework; sourceTree = "<group>"; };
 		E47821B224755F20007B528C /* SDK Changers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDK Changers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47821B524755F20007B528C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E47821B924755F20007B528C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		E47821C124755F25007B528C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E47821C324755F25007B528C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C8B25524EBA3E300019E0A /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		E4F675942510DE66001781D7 /* MotionTagSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MotionTagSDK.framework; sourceTree = "<group>"; };
+		E4F675952510DE66001781D7 /* ChangersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChangersSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47045612510AF1100019C24 /* ChangersSDK.framework in Frameworks */,
-				E470455F2510AF1100019C24 /* MotionTagSDK.framework in Frameworks */,
+				E4F675982510DE66001781D7 /* ChangersSDK.framework in Frameworks */,
+				E4F675962510DE66001781D7 /* MotionTagSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +65,8 @@
 		E470455C2510AF1100019C24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E470455E2510AF1100019C24 /* ChangersSDK.framework */,
-				E470455D2510AF1100019C24 /* MotionTagSDK.framework */,
+				E4F675952510DE66001781D7 /* ChangersSDK.framework */,
+				E4F675942510DE66001781D7 /* MotionTagSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

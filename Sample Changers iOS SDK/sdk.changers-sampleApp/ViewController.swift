@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
     @IBAction func copiedAction() {
         if let changersUUID = ChangersHelper.changersUUID {
-            UIPasteboard.general.setValue("environement : \(ChangersHelper.changersEnv) \n\n changers user id: \(changersUUID) \n\n automatic tracking id: \(appDelegate.changers.motionTagUUID ?? "null") \n\n user token: \(appDelegate.changers.userToken ?? "null")"  , forPasteboardType: "public.utf8-plain-text")
+            UIPasteboard.general.setValue("environement : \(ChangersHelper.changersEnv) \n\n changers user id: \(changersUUID)"  , forPasteboardType: "public.utf8-plain-text")
             let alert = UIAlertController(title: "[Changers SDK \(Changers.versionBuildSDK) - \(ChangersHelper.changersEnv))]", message: "User credentials copied to clipboard ✅", preferredStyle: .alert)
             let continueAction = UIAlertAction(title: "Ok", style: .default)
             alert.addAction(continueAction)
