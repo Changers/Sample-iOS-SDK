@@ -1,4 +1,0 @@
-framework module ChangersSDK {
-    header "ChangersSDK-Swift.h"
-    requires objc
-}
