@@ -27,10 +27,10 @@ To function properly the SDK requires the **'Always'** location permission.
   Manually drag and drop `MotionTagSDK.framework` to Your project
 
 ```
-ChangersSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20/ChangersSDK.framework)
+ChangersSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK)
 
 
-MotionTagSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK%20/MotionTagSDK.framework)
+MotionTagSDK available [Here](https://github.com/Changers/Sample-iOS-SDK/tree/master/Sample%20Changers%20iOS%20SDK)
 
 
   
@@ -52,7 +52,7 @@ public protocol ChangersDelegate: class {
 
 
 ```
-static func loadWebApp(on viewController: UIViewController, debug: Bool = false, completion: (() -> Void)? = nil)
+static func loadWebApp(on viewController: UIViewController, completion: (() -> Void)? = nil)
 static var isReady: Bool { get }
 
 ```
