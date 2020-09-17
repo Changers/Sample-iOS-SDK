@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ChangersSDK-Swift.h</key>
 		<data>
-		rhC86wJXWpfUCM65KK86yAlfa3A=
+		GFSZ9SRegz/tmhIgL/VS6HBAgM0=
 		</data>
 		<key>Headers/changers_sdk.h</key>
 		<data>
@@ -22,12 +22,30 @@
 		</data>
 		<key>Modules/ChangersSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		BMKtv+LlYMqR0hUxwB7pqdhQj1g=
+		qh6IPxgDz+I5x8U0RwcQDPry1Bo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		AnynDFbpDUk8aNB3HnVhYSrjSoE=
 		</data>
+		<key>de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p0fdqCqzF390XoZHkRHlnRShjVo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/KL7jHa1xp6/Ij+zWWv89uknDao=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -35,7 +53,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cMbU/NKT3vd+bzRfy+TFsHVRV0a2IWEyI0dxidyWVt4=
+			PNvLcGBYmvvrKITF0fVu6c2KlDGMPHCWEl/aT1vvSpU=
 			</data>
 		</dict>
 		<key>Headers/changers_sdk.h</key>
@@ -56,7 +74,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fzEStmkzy/qnhNYN4H4bTgmQYgKAtkizf+zWkW6Xm5A=
+			VJWl5njuBCtvdE9aAyPoZLRxR6CO/mVcMv4sixiha8c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -65,6 +83,24 @@
 			<data>
 			aAS9djjWeJh+3x5EGC2FYboQx18FzORyWTEn7qCiGRQ=
 			</data>
+		</dict>
+		<key>de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Awk1ToM52XL5QHt7HUM16aHGAK34/E/kU0ASvaXyEOs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pfJUWwG8mml/iJdGXviQOkFjIPVKIiSVhpiF5eJ+z0Q=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>
