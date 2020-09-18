@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ChangersSDK-Swift.h</key>
 		<data>
-		GFSZ9SRegz/tmhIgL/VS6HBAgM0=
+		le1pZohMYI3sjUcFcNntE7LtVZ8=
 		</data>
 		<key>Headers/changers_sdk.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		AIT6LLCRkgw/Lc3/ml6UHyqSY7U=
+		cQnnCwsqc2XIDKmg59SqSKhbHMA=
 		</data>
 		<key>Modules/ChangersSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		04UB95lL3gEFYEsKgA6OJkWy2Ps=
+		rl5qMHBqi6t4VeqvJf1ZY18md8c=
 		</data>
 		<key>Modules/ChangersSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		i6B1XDLtILlrve4tAiHgEyTCEp8=
+		Fv69X/4Cnr0Khpx6g9kFuVmGU88=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PNvLcGBYmvvrKITF0fVu6c2KlDGMPHCWEl/aT1vvSpU=
+			O8bk5HGL0MQRU0/qeIcFwDlRQLvN7/0SuizpcS0ajCs=
 			</data>
 		</dict>
 		<key>Headers/changers_sdk.h</key>
@@ -67,14 +67,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O1B4gLEo8lo5/5E6V2wW4LNVatCU8R7PK+iVuxp2Pyo=
+			nxD19/dBq4nBTYmRKKbJyA6o1YPXGYAc6krfpxztHoQ=
 			</data>
 		</dict>
 		<key>Modules/ChangersSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aqInUETM7lv/lgZN40MMcmIbfeFZ0bj3imudZ3TBbNY=
+			teMBXx3bTNbgVosr/sA0RQ/8FtJfJ0GoHmaAghBEbyM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
