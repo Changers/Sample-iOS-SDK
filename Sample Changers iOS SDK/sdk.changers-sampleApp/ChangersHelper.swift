@@ -15,7 +15,7 @@ extension ChangersEnv {
         case .development:
             return "client_secret"
         case .production:
-            return "w14mkOzaFvFKnWGc0vQmCyC6QJSXoeGV7bAPlDKD"
+            return "client_secret"
         case .stage:
             return "client_secret"
         }
@@ -26,14 +26,14 @@ extension ChangersEnv {
         case .development:
             return 0
         case .production:
-            return 2
+            return 0
         case .stage:
             return 0
         }
     }
     
     var clientName: String {
-        return  "darmstadt"
+        return  ""
     }
 }
 
